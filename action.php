@@ -20,10 +20,26 @@
 #THE SOFTWARE.
 */
 
-require_once("web/header.php");
+require_once("core/core.php");
+
+if(!$ajax){
+    require_once("web/header.php");
+}
 
 if (!$allow_access) {
-    echo $LANG["logneeded"];
+    if($_GET['action'] == 'login'){
+        if (!empty($_GET['upass']) && !empty($_GET['ulogin'])) {
+            if (login($login, $pass, $_GET['ulogin'], $_GET['upass'])) {
+                echo $LANG["logok"];
+            } else {
+                echo $LANG["logfail"];
+            }
+        } else {
+            $isparamsok = false;
+        }
+    }else{
+        echo $LANG["logneeded"];
+    }
 } else {
     if (empty($_GET['action'])) {
         echo $LANG["noactiongiven"];
@@ -31,6 +47,17 @@ if (!$allow_access) {
         $isparamsok = true; //Check if we send all parameters right
         $found = 0;
         switch ($_GET['action']) {
+            case 'list':
+                if (!empty($_GET['tab'])) {
+                    if($_GET['tab'] == 'open'){
+                        listtasks($json_a, "open", $dateformat, $LANG, $rowstyle);
+                    }else{
+                        listtasks($json_a, "closed", $dateformat, $LANG);
+                    }
+                } else {
+                    $isparamsok = false;
+                }
+                break;
             case 'edit':
                 if (!empty($_GET['id'])) {
                     $taskid = htmlspecialchars($_GET['id']);
@@ -245,17 +272,6 @@ if (!$allow_access) {
                     $isparamsok = false;
                 }
                 break;
-            case 'login':
-                if (!empty($_GET['upass']) && !empty($_GET['ulogin'])) {
-                    if (login($login, $pass, $_GET['ulogin'], $_GET['upass'])) {
-                        echo $LANG["logok"];
-                    } else {
-                        echo $LANG["logfail"];
-                    }
-                } else {
-                    $isparamsok = false;
-                }
-                break;
             case 'logout':
                 logout();
                 echo $LANG["logoutok"];
@@ -271,10 +287,12 @@ if (!$allow_access) {
 }
 
 //Redirect
-if ($_GET['action'] != 'edit') {
+if ($_GET['action'] != 'edit' && !ajax) {
     echo $LANG["redirected"];
     redirect();
 }
 
-require_once("web/footer.php");
+if(!$ajax){
+    require_once("web/footer.php");
+}
 ?>

@@ -29,9 +29,18 @@ require_once(realpath(__DIR__ . "/../core/core.php"));
     <meta name="description" content="<?php echo $projectdesc; ?>"/>
 
     <script type="text/javascript" src="web/js/jquery.min.js"></script>
-    <!--[if lt IE 9]><script src="web/js/html5.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="web/js/html5.js"></script><![endif]-->
     <script type="text/javascript" src="web/js/prettify.js"></script>
     <script type="text/javascript" src="web/js/kickstart.js"></script>
+    <?php
+    if ($ajax) {
+        ?>
+        <script type="text/javascript" src="web/js/ajax.js"></script>
+        <?php
+    }
+    ?>
+
 
     <link rel="stylesheet" type="text/css" href="web/css/kickstart.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="web/css/style.css" media="all"/>

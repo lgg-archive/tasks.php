@@ -1,6 +1,10 @@
+###
+# If you are going to use this in web - leave it uncomment
+# if you are going to use this local - comment/delete 3 lines below
 <files "task.json">
 deny from all
 </files>
+###
 
 Options -Indexes
 

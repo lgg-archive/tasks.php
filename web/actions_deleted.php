@@ -7,9 +7,9 @@
  * Time: 7:02
  */
 ?>
-<a href="action.php?id=<?php echo $item ?>&action=restore" class="icon-link">
+<a href="action.php?id=<?php echo $item ?>&action=restore" class="action-restore icon-link">
     <span class="icon small darkgray" data-icon="p"></span>
 </a>
-<a href="action.php?id=<?php echo $item ?>&action=kill" class="icon-link">
+<a href="action.php?id=<?php echo $item ?>&action=kill" class="action-kill icon-link">
     <span class="icon small darkgray" data-icon="F"></span>
 </a>

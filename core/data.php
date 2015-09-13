@@ -15,11 +15,14 @@ $projectdesc = ""; //Project Description
 $filename = "task.json"; //task filename(must be .json)
 $rowstyle = "priority"; //striped or priority
 
-$projectversion = "v0.1"; //Project ver
+$projectversion = "v0.2"; //Project ver
 $dateformat = date('d-m-Y'); //Date format
 
 //Need auth?
 $auth = true; //need auth?
+
+//With ajax?
+$ajax = true;
 
 //Errors
 error_reporting(0);

@@ -123,3 +123,17 @@ body {
 .error {
     color: red;
 }
+
+.hide-animation {
+    animation-name: hide;
+    animation-duration: 0.7s;
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

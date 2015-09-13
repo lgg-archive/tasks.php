@@ -9,13 +9,19 @@ It uses a JSON text file for the tasks, and the visual side is created with the 
 - No ads
 - Nobody selling your data
 - Nobody monitoring your activity
-- Data is easy to get out (no vendor lock-in) and to backup.
+- Data is easy to get out (no vendor lock-in) and to backup.(see .htaccess for more info)
 - Offline mode? Host it on your local machine with a LAMP/WAMP/MAMP/XAMPP server.
 - Sync? Use a syncing service on the hosts ([owncloud](http://owncloud.org) and [sparkleshare](http://sparkleshare.org) are quite good) and point the program to a json file in that folder.
 - Offline sync? Combine above 2 points, or put the software in a git, svn or other version control system repo.
 
 
 ## Changelog
+
+### v0.2
+
+- Added ajax
+- Upload to github
+- fixed auth
 
 ### v0.1
 

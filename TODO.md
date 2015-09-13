@@ -1,6 +1,3 @@
-##TODO
-* Add .gitignore
-
 ##Date
 * Fix data picker
 
@@ -9,6 +6,7 @@
 * How to right use </input>
 
 ##Css && js
+* rebuild with bootstrap sometime or material	
 * Refactor style
 * Add gulp
     * Minify
@@ -22,8 +20,7 @@
     * add perms
 
 ##Ajax
-* maybe
+* fix when no tasks
+* fix missing icons
 
-###PHPSTORM
-    Json viewer
-    gitignore viewer
+
