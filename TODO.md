@@ -2,6 +2,7 @@
 * Fix data picker
 
 ##General
+* add composer for node part
 * Refactor all code
 * How to right use </input>
 
