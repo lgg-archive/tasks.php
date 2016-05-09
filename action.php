@@ -287,7 +287,7 @@ if (!$allow_access) {
 }
 
 //Redirect
-if ($_GET['action'] != 'edit' && !ajax) {
+if ($_GET['action'] != 'edit' && !$ajax) {
     echo $LANG["redirected"];
     redirect();
 }
