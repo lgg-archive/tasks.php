@@ -13,14 +13,14 @@
             </h2>
             <form name="login" action="action.php" method="GET">
                 <div class="row">
-                    <input name="ulogin" type="text" value="" placeholder="login"></input>
+                    <input name="ulogin" type="text" value="" placeholder="login" />
                 </div>
                 <div class="row">
-                    <input name="upass" type="password" value=""></input>
+                    <input name="upass" type="password" value="" />
                 </div>
                 <div class="row">
-                    <input type="hidden" name="action" value="login"></input>
-                    <input type="submit" name="submit" value="<?php echo $LANG["login"] ?>"></input>
+                    <input type="hidden" name="action" value="login" />
+                    <input type="submit" name="submit" value="<?php echo $LANG["login"] ?>" />
                 </div>
             </form>
         </div>
