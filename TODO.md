@@ -15,6 +15,7 @@
 * Add css improves
 
 ##Auth
+* Add ajax login
 * Add (json storage) user create
 * Add multiuser
     * add who create
